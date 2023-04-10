@@ -20,6 +20,7 @@ body {
 
 .card-group {
   position: absolute;
+  transition: transform 400ms ease;
 }
 
 .big-card {
@@ -63,6 +64,23 @@ body {
   transform: translate(10%, 3%) rotate(5deg);
 }
 
+.card-group[data-index="1"] > .big-card:nth-child(6) {
+  background-image: url('https://images.unsplash.com/photo-1568198532231-afb7b87ebd66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(8) {
+  background-image: url('https://images.unsplash.com/photo-1513245543132-31f507417b26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80');
+}
+
+
+.card-group[data-index="2"] > .big-card:nth-child(6) {
+  background-image: url('https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(8) {
+  background-image: url('https://images.unsplash.com/photo-1582725461742-8ecd962c260d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+}
+
 
 .little-card:nth-child(1) {
   background-image: url('https://images.unsplash.com/photo-1518700445284-c7212fa9ab88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'); 
@@ -77,7 +95,6 @@ body {
 }
 
 .little-card:nth-child(7) {
- 
   background-image: url('https://images.unsplash.com/photo-1532101585208-601806c8b6e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'); 
 }
 
@@ -100,7 +117,6 @@ body {
 }
 
 
-
 .card-group:hover > .little-card:nth-child(1) {
   transform: translate(200%, -160%) rotate(-15deg);
 }
@@ -118,7 +134,6 @@ body {
 }
 
 
-
 .soc-cards-buttons {
   display: flex;
   justify-content: space-around;
@@ -128,6 +143,7 @@ body {
 
 .soc-cards-buttons > button {
   flex: 0 0 7vmin;
+  padding: 0;
   font-size: 2.5vmin;
   border: 2px solid rgb(200, 200, 200);
   border-radius: 50%;
@@ -141,4 +157,24 @@ body {
 #like-button {
   border-color: rgb(255, 23, 100);
   color: rgb(255, 23, 100);
+}
+
+.card-group[data-status="unknown"] {
+  transform: scale(0);
+}
+
+.card-group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+}
+
+.card-group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
 }
