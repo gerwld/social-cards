@@ -154,6 +154,11 @@ body {
   cursor: pointer;
 }
 
+.soc-cards-buttons > button:active {
+  border: 3px solid rgb(200, 200, 200);
+  transform: translateY(2px);
+}
+
 #like-button {
   border-color: rgb(255, 23, 100);
   color: rgb(255, 23, 100);
