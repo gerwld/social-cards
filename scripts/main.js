@@ -31,5 +31,5 @@ const handleLikeClick = () => {
        setTimeout(() => {
         nextGroup.dataset.status = "active";
         activeIndex = nextIndex;
-       }, 300)       
+       }, 400)       
 }
